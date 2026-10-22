@@ -17,6 +17,7 @@
         </div>
 
         <form method="POST" action="{{ url_for('salir') }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <button type="submit">Cerrar sesión</button>
         </form>
         <p class="footer">Página protegida · Cloud Login</p>
