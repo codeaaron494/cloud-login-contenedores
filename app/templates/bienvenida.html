@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bienvenida</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="card welcome">
+        <div class="logo">✓</div>
+        <h1>¡Bienvenido, {{ nombre }}!</h1>
+        <p class="subtitle">Has iniciado sesión correctamente.</p>
+
+        <div class="success">
+            Tu cuenta ha sido validada mediante PostgreSQL.
+        </div>
+
+        <form method="POST" action="{{ url_for('salir') }}">
+            <button type="submit">Cerrar sesión</button>
+        </form>
+        <p class="footer">Página protegida · Cloud Login</p>
+    </main>
+</body>
+</html>
